@@ -1,32 +1,42 @@
+// Algorithms Calculator in Cairo
+// The module implements basic mathematical operations and algorithms
+
+// Adds two integers and returns the result
 fn add(a: i32, b: i32) -> i32 {
     a + b
 }
 
+// Subtracts b from a and returns the result
 fn subtract(a: i32, b: i32) -> i32 {
     a - b
 }
 
+// Multiplies two integers and returns the result
 fn multiply(a: i32, b: i32) -> i32 {
     a * b
 }
 
+// Divides a by b, panics if b is zero to prevent division by zero error
 fn divide(a: i32, b: i32) -> i32 {
     assert(b != 0, 'Cannot divide by zero');
     a / b
 }
 
+// Returns true if n is even, false if odd
 fn is_even(n: i32) -> bool {
     n % 2 == 0
 }
 
+// Recursively calculates the factorial of n (e.g, 5! = 120)
 fn factorial(n: u32) -> u32 {
     if n == 0 {
-        1
+        1 // Base case: 0! = 1
     } else {
-        n * factorial(n - 1)
+        n * factorial(n - 1) // Recursive case
     }
 }
 
+// Returns the larger of two integers
 fn max(a: i32, b: i32) -> i32 {
     if a > b {
         a
